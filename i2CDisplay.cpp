@@ -12,7 +12,7 @@ void SetupDisplay()
 
   // Turn on the blacklight and print a message.
   lcd.backlight();
-  displayPrintBoth(0, 0, "Startup", "Complete");
+  Serial.println("LCD Startup complete");
 }
 
 void displayPrintln(int posX, int posY, String in)
@@ -23,11 +23,6 @@ void displayPrintln(int posX, int posY, String in)
 
 void displayPrintBoth(int aOffset, int bOffset, String aString, String bString)
 {
-  Serial.print("a: ");
-  Serial.print(aString);
-  Serial.print(" | b: ");
-  Serial.println(bString);
-  
   lcd.clear();
   lcd.setCursor(aOffset, 0);
   lcd.print(aString + "                ");

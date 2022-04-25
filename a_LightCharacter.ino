@@ -107,7 +107,7 @@ float LightCharacter::LoopControl() //Return what value the light should have no
 }
 LightCharacter characters[] = 
 {
-  LightCharacter("Fixed",                 1,      1,      0),
+  LightCharacter("Fixed",                 1,      1,      0, true, 0),
   LightCharacter("Flash",                 3000,   800,    100),
   LightCharacter("Group Flash",           8000,   900,    100, false, 2000, 2),
   LightCharacter("Quick",                 1200,   600,    75),

@@ -7,7 +7,7 @@ int SerialInput()
   if (Serial.available() > 0)
   {
     int recivedMsg = Serial.read();
-    if(activeReciveRefrence != 10)  //10 is a line feed so should never be used 
+    if(activeReciveRefrence != 10)  //10 is a line feed so should never be used normally
     {
       if(activeReciveRefrence == 48 && recivedMsg >= 48 && recivedMsg <= 57)  //Starts with 0
       {
