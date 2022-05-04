@@ -11,7 +11,7 @@ void SetupDisplay()
   lcd.begin();
 
   // Turn on the blacklight and print a message.
-  lcd.backlight();
+  SetBacklight(true);
   Serial.println("LCD Startup complete");
 }
 
@@ -28,4 +28,8 @@ void displayPrintBoth(int aOffset, int bOffset, String aString, String bString)
   lcd.print(aString + "                ");
   lcd.setCursor(bOffset,1);
   lcd.print(bString + "                ");
+}
+void SetBacklight(bool toggle)
+{
+  lcd.setBacklight(toggle);
 }

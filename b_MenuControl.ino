@@ -22,7 +22,7 @@ void MenuActivateOption() //Activate a specific Option to do what its role is
   //Serial.println("------------------------------------------");
   int realActiveChoice = GetRealActiveChoice();
   int tempType = pgm_read_word_near(&type[realActiveChoice]);
-  int tempTarget = pgm_read_word_near(&target[realActiveChoice])
+  int tempTarget = pgm_read_word_near(&target[realActiveChoice]);
   if(tempType == 0) //Active choice type is open Menu
   {
     activeChoice = 0;
@@ -32,9 +32,47 @@ void MenuActivateOption() //Activate a specific Option to do what its role is
   }
   else if(tempType == 1) //Active choice type is activate Function
   {
-    Serial.print("Activate : ");
-    Serial.println(tempTarget);
-    
+    if(tempTarget == 0)//Random Type
+    {
+      activeCharacter = random(0, 12);
+    }
+    else if(tempTarget == 1)//Random Time of active Type
+    {
+      Serial.println("random time");
+    }
+    else if(tempTarget == 2)//Random Time and Type
+    {
+      Serial.println("random both");
+    }
+    else if(tempTarget == 3)//LED Night Mode
+    {
+     if(maxLight == 255)
+     {
+      maxLight = 100; 
+     }
+     else
+     {
+      maxLight = 255;
+     }
+    }
+    else if(tempTarget == 4)//Display Night Mode
+    {
+      if(displayBackLight == true)
+     {
+      displayBackLight = false;
+      SetBacklight(false);
+     }
+     else
+     {
+      displayBackLight = true;
+      SetBacklight(true);
+     }
+    }
+    else if(tempTarget == 5)//Show active character
+    {
+      Serial.println(activeCharacter);
+      displayPrintln(15, 1, String(activeCharacter));
+    }
     return;
   }
   else if(tempType == 2) //Active choice type is open Menu

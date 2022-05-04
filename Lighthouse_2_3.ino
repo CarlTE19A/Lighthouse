@@ -7,6 +7,8 @@
 //Menu varibles (not using classes as that takes slightly more memory)
 static int activeChoice = 0;
 static int activeMenu = 0;
+
+bool displayBackLight = true;
 const char string0[] PROGMEM = "Random";
 const char string1[] PROGMEM = "Quick Choose";
 const char string2[] PROGMEM = "Settings";
@@ -29,9 +31,9 @@ const char string15[] PROGMEM = "Group Occulting";
 const char string16[] PROGMEM = "Interupted Quick";
 const char string17[] PROGMEM = "Fixed and Flash";
 
-const char string18[] PROGMEM = "Night Mode";
-const char string19[] PROGMEM = "Something else";
-const char string20[] PROGMEM = "Oh that is cat";
+const char string18[] PROGMEM = "LED Night Mode";
+const char string19[] PROGMEM = "Disp Night Mode";
+const char string20[] PROGMEM = "Active Character";
 
 const char *const title[] PROGMEM = {
   string0, string1, string2, 

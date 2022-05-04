@@ -1,7 +1,3 @@
- #include "RotEncoder.h"
-#include "SerialInput.h"
-#include "i2CDisplay.h"
-
 void setup()  //Setup the Arduino to work correctly and display initial values
 {
 	Serial.begin(9600);
@@ -33,6 +29,7 @@ void RotToLightOS() //Takes the input from the rotational encoder and does chang
   if(CheckRotButton() == true)
   {
     MenuActivateOption();
+    delay(500); //remove, but now makes buttons not dubble click
   }
 }
 void SerialToLightOS()  //Takes input from the serial connection to affect the OS
@@ -55,7 +52,6 @@ float UpdateTime()	//To calculate when what should happen a few diffrent time st
 	prevFrame = realMillis;
   return frameTime;
 }
-
 
 //När en loop är klar blir timeOffset 0 igen
 //När en ny LightCharacter vals blir timeOffset 0 igen

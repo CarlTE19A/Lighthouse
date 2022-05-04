@@ -1,0 +1,90 @@
+<Project>
+  <Name>Lighthouse</Name>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>LightCharacter</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>LightCharacter</Name>
+        <Access>Public</Access>
+        <Location left="172" top="68" />
+        <Size width="720" height="342" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public String characterName</Member>
+        <Member type="Field">private int totalTime</Member>
+        <Member type="Field">private int onTime</Member>
+        <Member type="Field">private bool occulting</Member>
+        <Member type="Field">private float rampTime</Member>
+        <Member type="Field">private float rampPerMilli</Member>
+        <Member type="Constructor">public LightCharacter(String characterName, int totalTime, int onTime, float rampTime)</Member>
+        <Member type="Constructor">public LightCharacter(String characterName, int totalTime, int onTime, float rampTime, bool occulting, int minLight)</Member>
+        <Member type="Method">public void Update()</Member>
+        <Member type="Method">public float LoopControl()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Menu</Name>
+        <Access>Public</Access>
+        <Location left="993" top="147" />
+        <Size width="379" height="313" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private Option[] options</Member>
+        <Member type="Field">public int ammountOfOptions</Member>
+        <Member type="Constructor">public Menu(Option[] options, int ammountOfOptions)</Member>
+        <Member type="Method">public static void ChangeMenu(int newMenu)</Member>
+        <Member type="Method">public static void ChangeOption(int changeValue)</Member>
+        <Member type="Method">public static void Display()</Member>
+        <Member type="Method">public static void ActivateOption()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Option</Name>
+        <Access>Public</Access>
+        <Location left="993" top="496" />
+        <Size width="376" height="267" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public OptionType type</Member>
+        <Member type="Field">public int target</Member>
+        <Member type="Field">char[] title</Member>
+        <Member type="Constructor">public Option(char[] title, OptionType type, int target)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>GroupCharacter</Name>
+        <Access>Public</Access>
+        <Location left="172" top="466" />
+        <Size width="720" height="173" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">int loopTime</Member>
+        <Member type="Field">private int loopAmmount</Member>
+        <Member type="Method">public void Update()</Member>
+        <Member type="Constructor">public GroupCharacter(String characterName, int totalTime, int onTime, float rampTime, bool occulting, int loopTime, int loopAmmount)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>WeakGroupCharacter</Name>
+        <Access>Public</Access>
+        <Location left="172" top="701" />
+        <Size width="720" height="173" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">public void Update()</Member>
+        <Member type="Constructor">public WeakGroupCharacter(String characterName, int totalTime, int onTime, float rampTime, bool occulting, int loopTime, int loopAmmount)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Relationships>
+      <Relationship type="Generalization" first="3" second="0">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>534</X>
+          <Y>441</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="4" second="3">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+    </Relationships>
+  </ProjectItem>
+</Project>

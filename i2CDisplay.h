@@ -6,4 +6,5 @@
 void SetupDisplay();
 void displayPrintln(int posX, int posY, String in);
 void displayPrintBoth(int aOffset, int bOffset, String aString, String bString);
+void SetBacklight(bool toggle);
 #endif
